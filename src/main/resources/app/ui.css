@@ -1,0 +1,26 @@
+.a
+{
+	-fx-background-color:  #2977ec;
+	-fx-background-radius :  60 0  0 0;
+	-fx-border-radius : 60 0  0 0;
+}
+.tx{
+	-fx-text-fill:#2977ec;
+}
+.anch{
+		-fx-background-color:  #fff;
+		-fx-background-radius : 60 5 60 5;
+-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+
+}
+.anch1{
+		-fx-background-color:  #fff;
+		-fx-background-radius : 5 5 5 60;
+-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+
+}.anch2{
+		-fx-background-color:  #fff;
+		-fx-background-radius : 5 5 60 60;
+-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+
+}

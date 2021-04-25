@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1353.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MaiCtrl">
+   <top>
+      <AnchorPane prefHeight="64.0" prefWidth="1122.0" style="-fx-background-color: linear-gradient(to right top, #346aca, #0082d6, #0097db, #00aad9, #00bcd5);" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="582.0" layoutY="6.0" prefHeight="52.0" prefWidth="190.0" text="Planning" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="704.0" prefWidth="875.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="62.0" layoutY="64.0" prefHeight="603.0" prefWidth="517.0" styleClass="anch2" stylesheets="@ui.css">
+               <children>
+                  <AnchorPane layoutX="-1.0" prefHeight="45.0" prefWidth="520.0" style="-fx-background-color: linear-gradient(to right top, #346aca, #0082d6, #0097db, #00aad9, #00bcd5);" stylesheets="@ui.css">
+                     <children>
+                        <Label alignment="CENTER" layoutX="180.0" layoutY="9.0" prefHeight="20.0" prefWidth="160.0" text="Pert" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="196.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@diagram.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" layoutX="18.0" layoutY="52.0" prefHeight="531.0" prefWidth="481.0" style="-fx-background-color: #fff;" stylesheets="@main.css" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ganttPane" layoutX="590.0" layoutY="65.0" prefHeight="601.0" prefWidth="538.0" styleClass="anch2" stylesheets="@ui.css">
+               <children>
+                  <AnchorPane layoutX="-1.0" prefHeight="45.0" prefWidth="543.0" style="-fx-background-color: linear-gradient(to left top, #346aca, #0082d6, #0097db, #00aad9, #00bcd5);" stylesheets="@ui.css">
+                     <children>
+                        <Label alignment="CENTER" layoutX="192.0" layoutY="8.0" prefHeight="30.0" prefWidth="160.0" text="Gantt" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="203.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@gantt.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <LineChart fx:id="lineChart" animated="false" layoutX="11.0" layoutY="72.0" legendVisible="false" prefHeight="501.0" prefWidth="513.0" visible="false">
+                     <xAxis>
+                        <NumberAxis />
+                     </xAxis>
+                     <yAxis>
+                        <CategoryAxis side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+               </children>
+            </AnchorPane>
+            <Button fx:id="openBtn" layoutX="1155.0" layoutY="600.0" mnemonicParsing="false" onAction="#openClicked" prefHeight="31.0" prefWidth="179.0" stylesheets="@button_2.css" text="Modify" />
+            <Button fx:id="durationBtn" disable="true" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="199.0" stylesheets="@button_2.css" text="Button" />
+            <ListView fx:id="listView" layoutX="1156.0" layoutY="64.0" prefHeight="441.0" prefWidth="177.0" stylesheets="@listViewCss.css" />
+            <Button fx:id="openBtn1" layoutX="1155.0" layoutY="560.0" mnemonicParsing="false" onAction="#openClicked" prefHeight="31.0" prefWidth="179.0" stylesheets="@button_2.css" text="Delete" />
+            <Button fx:id="openBtn11" layoutX="1155.0" layoutY="521.0" mnemonicParsing="false" onAction="#openClicked" prefHeight="31.0" prefWidth="179.0" stylesheets="@button_2.css" text="Open" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
