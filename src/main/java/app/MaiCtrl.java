@@ -274,4 +274,12 @@ public class MaiCtrl implements Initializable {
                 endBounds));
     }
 
-        }
+    public void onDelete(ActionEvent actionEvent) {
+
+        Pert p =listView.getSelectionModel().getSelectedItem();
+        Db db = new Db();
+        db.delete(p.getId());
+        listView.getItems().remove(p);
+
+    }
+}

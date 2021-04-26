@@ -4,10 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Pert;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  *
@@ -84,6 +81,48 @@ public class Db {
         System.out.println("records from Db");
 
         return  observableList;
+
+
+
+    }
+
+    public Pert InsertPert(Pert pert)  {
+        PreparedStatement pstmt;
+        int id = 0;
+        String query = "insert into t1(name,tasks)values(?,?)";
+        try {
+            pstmt = (PreparedStatement) con.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
+            pstmt.setString(1, pert.getName());
+            pstmt.setString(2,pert.getTasks());
+            pstmt.executeUpdate();
+            rs = pstmt.getGeneratedKeys();
+            if(rs != null && rs.next()){
+                id= rs.getInt(1);
+                pert.setId(id);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+        return pert;
+
+    }
+
+    public void delete(int id){
+        System.out.println("test");
+        String sql = "DELETE FROM t1 WHERE id="+id;
+        try {
+
+            st.executeUpdate(sql);
+        }catch(SQLException e) {
+            System.out.println("Error");
+
+        }
 
 
 

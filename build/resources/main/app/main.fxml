@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="1162.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainCtrl">
+   <children>
+      <AnchorPane layoutX="133.0" layoutY="14.0" prefHeight="502.0" prefWidth="835.0" stylesheets="@main.css">
+         <children>
+            <AnchorPane layoutX="229.0" layoutY="27.0" prefHeight="564.0" prefWidth="794.0" style="-fx-background-color: #e0e0e0;" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="48.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#8e8585" height="25.0" radius="12.0" spread="0.2" width="25.0" />
+                     </effect>
+                  </ScrollPane>
+                  <AnchorPane fx:id="ganttPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f1f2f4; -fx-background-radius: 3;" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="48.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#8e8585" height="25.0" radius="12.0" spread="0.2" width="25.0" />
+                     </effect>
+                     <children>
+                        <LineChart fx:id="lineChart" animated="false" legendVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <xAxis>
+                              <NumberAxis />
+                           </xAxis>
+                           <yAxis>
+                              <CategoryAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="openBtn" layoutX="644.0" layoutY="8.0" mnemonicParsing="false" onAction="#openClicked" text="Button" />
+                  <Button fx:id="durationBtn" disable="true" layoutX="28.0" layoutY="48.0" mnemonicParsing="false" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-63.0" layoutY="-52.0" prefHeight="511.0" prefWidth="110.0" style="-fx-background-color: #f1f3f5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-11.0" layoutY="108.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <ListView fx:id="listView" layoutX="1021.0" layoutY="10.0" prefHeight="502.0" prefWidth="129.0" />
+      <Button fx:id="ganttBtn" layoutX="615.0" layoutY="467.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="141.0" text="Gantt">
+         <graphic>
+            <ImageView fitHeight="113.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gantt.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="pertBtn" layoutX="309.0" layoutY="492.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="164.0" text="pert">
+         <graphic>
+            <ImageView fitHeight="103.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@diagram.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <JFXHamburger layoutX="1071.0" layoutY="551.0" />
+   </children>
+</AnchorPane>

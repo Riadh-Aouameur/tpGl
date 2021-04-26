@@ -1,0 +1,10 @@
+F | 3 | B
+C | 4 | A H B
+G | 3 | R
+E | 3 | G S R
+R | 3 | -
+S | 2 | D F
+D | 2 | R
+H | 4 | B
+A | 5 | D F R
+B | 4 | -

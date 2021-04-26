@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="169.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.listCtrl">
+   <children>
+
+      <Label fx:id="l2" layoutX="81.0" layoutY="35.0" prefHeight="21.0" prefWidth="84.0" text="Name : p1" />
+      <Label fx:id="l3" alignment="CENTER" layoutX="4.0" layoutY="65.0" prefHeight="21.0" prefWidth="161.0" text="17/06/2021" />
+      <Label fx:id="l1" layoutX="81.0" layoutY="14.0" prefHeight="21.0" prefWidth="84.0" text="ID : 2" />
+      <ImageView fitHeight="48.0" fitWidth="59.0" layoutX="11.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@diagram.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

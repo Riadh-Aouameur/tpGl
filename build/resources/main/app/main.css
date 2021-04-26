@@ -1,0 +1,77 @@
+.chart-series-line {
+    -fx-stroke-width: 10;
+}
+.chart-line-symbol{
+    -fx-pref-width: 12px;
+    -fx-pref-height: 12px;
+
+}
+
+.menuBtn {
+    -jfx-button-type: FLAT;
+    -fx-background-color: #f2f4f6;
+    -fx-text-fill: black;
+
+}
+
+.menuBtn .glyph-icon{
+    -fx-fill: #afb5c1;
+    -glyph-size: 30px;
+}
+
+.menuBtn:hover{
+    -fx-background-color:  #e9eded;
+}
+
+.workBtn, .workBtn:hover{
+    -fx-background-color:  #2ab088;
+    -fx-text-fill: white;
+    -jfx-button-type: RAISED;
+}
+
+.workBtn .glyph-icon{
+    -fx-fill: white;
+}
+
+.labelBtn, .labelBtn:disabled{
+    -fx-background-color:  #455A64;
+    -fx-text-fill: white;
+    -jfx-button-type: FLAT;
+    -fx-opacity: 1.0 ;
+}
+
+
+.scroll-pane > .viewport {
+    -fx-background-radius: 3;
+    -fx-background-color:   linear-gradient(to right top, #346aca, #0082d6, #0097db, #00aad9, #00bcd5);
+}
+.scroll-pane {
+    -fx-background-color:  linear-gradient(to right top, #346aca, #0082d6, #0097db, #00aad9, #00bcd5);
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color:  linear-gradient(to right top, #346aca, #0082d6, #0097db, #00aad9, #00bcd5);
+    -fx-border-color: transparent;
+    -fx-background-radius: 3;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:  transparent;
+    /*-fx-background-radius: 0em;*/
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color:  linear-gradient(to right top, #346aca, #0082d6, #0097db, #00aad9, #00bcd5);
+    -fx-background-radius: 3;
+}
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+
